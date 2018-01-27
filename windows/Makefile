@@ -539,7 +539,7 @@ clementine-deps: clementine-build-deps clementine-gst-plugins openssl glibnetwor
 	$(call installpkg,$(quicktime))
 
 .done-dlfcn:
-	-mkdir $(stow)/$(dlfcn)/
+	-mkdir -p $(stow)/$(dlfcn)/
 	tar -xjf $(dlfcntgz) -C $(stow)/$(dlfcn)/
 	cd $(stow) && stow -R $(dlfcn)
 	touch $@
